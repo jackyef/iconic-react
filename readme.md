@@ -4,6 +4,7 @@ Love [Iconic icons](https://iconic.app/)? If you are working with React, you mig
 
 This package exports the icons available on https://iconic.app/ as React component that accepts 1 prop, `size`. By default, the size is `24`, but you can simply pass it a different value to get an appropriately sized icon for your use case!
 
+The icons use `fill="currentColor"`, which means it will automatically follow its closest parent text color.
 ## Example
 
 ```tsx
@@ -23,6 +24,8 @@ const Example = () => {
   );
 };
 ```
+
+For a more complete sample code, check out this [codesandbox](https://codesandbox.io/s/iconic-react-example-h1w2z?file=/src/App.js).
 
 ## Credits
 
