@@ -50,6 +50,7 @@
     "get-icons-list": "node scripts/getRawHtml.mjs && node scripts/getIconsList.mjs",
     "fetch-icons": "yarn get-icons-list && node scripts/downloadIcons.mjs",
     "generate-components": "node scripts/generateReactComponents.js",
+    "update-components": "node scripts/updateComponents.js",
     "test": "jest --env=jsdom --passWithNoTests __tests__/"
   },
   "peerDependencies": {
