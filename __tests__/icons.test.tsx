@@ -7,6 +7,8 @@ const componentsDir = path.resolve(__dirname, "../components");
 const components = fs.readdirSync(componentsDir);
 
 components.forEach((compFile) => {
+  if (compFile === "index.tsx") return;
+
   const compName = compFile.replace(".tsx", "");
 
   describe(`${compName} icon`, () => {

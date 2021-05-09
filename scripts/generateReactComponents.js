@@ -41,4 +41,17 @@ ${jsCode}`
   });
 };
 
+const generateIndexFile = () => {
+  const indexFileContent = iconsList.reduce((acc, v) => {
+    const titleCasedIconName = titleCase(v).replace(/-/g, "");
+
+    acc += `\nexport * from './${titleCasedIconName}'`;
+
+    return acc;
+  }, "/* This file is auto-generated */\n");
+
+  fs.writeFileSync(`./components/index.tsx`, indexFileContent);
+};
+
 generateReactComponents();
+generateIndexFile();
