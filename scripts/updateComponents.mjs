@@ -25,6 +25,12 @@ const run = async () => {
   console.log("✅  Generated react components for the icons!");
 
   console.log("✅  Updates done, please check the staged changes!");
+
+  // TODO: For auto-publishing
+  // If in CI environment
+  // Commit with a message
+  // Push to main branch
+  // Run yarn deploy
 };
 
 run();
