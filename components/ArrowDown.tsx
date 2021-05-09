@@ -8,7 +8,7 @@ interface Props extends React.SVGAttributes<SVGElement> {
 
 export const ArrowDown = ({ size = 24, ...props }: Props) => {
   return (
-    <svg width={size} height={size} fill="none" {...props}>
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" {...props}>
       <path
         stroke="currentColor"
         strokeLinecap="round"

@@ -1,6 +1,6 @@
 {
   "name": "iconic-react",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Collection of SVG icons from iconic.app as React components.",
   "engines": {
     "node": ">=12.16.0"
@@ -40,6 +40,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
+    "prepublish": "yarn test",
     "prepack": "yarn build",
     "deploy": "npm publish",
     "build": "concurrently yarn:build:*",

@@ -29,7 +29,10 @@ const generateReactComponents = () => {
 
 export const ${titleCasedIconName} = ({ size = 24, ...props }: Props) => {`
       )
-      .replace("width={24} height={24}", "width={size} height={size}")
+      .replace(
+        "width={24} height={24}",
+        'width={size} height={size} viewBox="0 0 24 24"'
+      )
       .replace("export default SvgComponent;", "");
 
     fs.writeFileSync(
