@@ -38,5 +38,3 @@ export const getIconsList = () => {
     JSON.stringify(foundIcons, null, 2)
   );
 };
-
-getIconsList();

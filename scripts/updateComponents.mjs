@@ -1,17 +1,30 @@
 import { execSync } from "child_process";
 
-import "./getRawHtml.mjs";
-import "./getIconsList.mjs";
+import { getRawHtml } from "./getRawHtml.mjs";
+import { getIconsList } from "./getIconsList.mjs";
+import { downloadIcons } from "./downloadIcons.mjs";
+import generateReactComponents from "./generateReactComponents.js";
 
-// At this point, if there's any changed file, we need to update the icons
-const diff = execSync("git diff").toString('utf-8');
+const run = async () => {
+  await getRawHtml();
+  console.log("✅  Fetched new raw HTML from iconic.app!");
+  await getIconsList();
+  console.log("✅  Scraped new icons list from the HTML!");
 
-if (!diff) {
-  console.log('No updates needed!')
-  process.exit(0)
-}
+  // At this point, if there's any changed file, we need to update the icons
+  const diff = execSync("git diff").toString("utf-8");
 
-console.log({ diff });
-//
-// require('./downloadIcons')
-// require('./generateReactComponents')
+  if (!diff) {
+    console.log("✅  No updates needed!");
+    process.exit(0);
+  }
+
+  await downloadIcons();
+  console.log("✅  Downloaded icons!");
+  await generateReactComponents();
+  console.log("✅  Generated react components for the icons!");
+
+  console.log("✅  Updates done, please check the staged changes!");
+};
+
+run();

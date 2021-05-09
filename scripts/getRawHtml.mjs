@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const iconCount = 999;
 
-const run = async () => {
+export const getRawHtml = async () => {
   // The iconic.app website seems to be doing some kind of HTML stitching to make
   // the web feels like an SPA. This POST request returns a part of HTML document
   // containing the icons
@@ -33,6 +33,6 @@ const run = async () => {
   const text = await response.text();
 
   fs.writeFileSync(path.join(__dirname, "./raw/icons-list.html"), text);
-};
 
-run();
+  return true;
+};

@@ -11,15 +11,17 @@ const iconsList = JSON.parse(
 
 const iconDownloadUrl = `https://iconic.app/icons/iconic/svg/{:iconName}.svg`;
 
-const downloadIcons = () => {
-  iconsList.forEach(async (iconName) => {
+export const downloadIcons = async () => {
+  const promises = iconsList.map(async (iconName) => {
     const response = await fetch(
       iconDownloadUrl.replace(`{:iconName}`, iconName)
     );
     const text = await response.text();
 
     fs.writeFileSync(`./svgs/${iconName}.svg`, text);
-  });
-};
 
-downloadIcons();
+    return true;
+  });
+
+  return Promise.all(promises);
+};
