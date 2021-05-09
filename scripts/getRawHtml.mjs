@@ -4,6 +4,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const iconCount = 999;
 
 const run = async () => {
   // The iconic.app website seems to be doing some kind of HTML stitching to make
@@ -24,8 +25,7 @@ const run = async () => {
     },
     referrer: "https://iconic.app/",
     referrerPolicy: "strict-origin-when-cross-origin",
-    body:
-      "action=load-contents&setup%5Btrigger%5D=auto&setup%5Bobject_type%5D=icon&setup%5Btemplate_part_id%5D=icon-grid-icon&setup%5Bnone_part_id%5D=&setup%5Bmore_part_id%5D=icon-grid-load-more&setup%5Bsource%5D=all&setup%5Bquery%5D=alphabetical&setup%5Bcount%5D=150&setup%5Bdelay%5D=0&setup%5Boffset%5D=0",
+    body: `action=load-contents&setup%5Btrigger%5D=auto&setup%5Bobject_type%5D=icon&setup%5Btemplate_part_id%5D=icon-grid-icon&setup%5Bnone_part_id%5D=&setup%5Bmore_part_id%5D=icon-grid-load-more&setup%5Bsource%5D=all&setup%5Bquery%5D=alphabetical&setup%5Bcount%5D=${iconCount}&setup%5Bdelay%5D=0&setup%5Boffset%5D=0`,
     method: "POST",
     mode: "cors",
   });

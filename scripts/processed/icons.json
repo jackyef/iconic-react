@@ -148,5 +148,15 @@
   "user-cross",
   "user-minus",
   "user-plus",
-  "users"
+  "users",
+  "users-minus",
+  "users-plus",
+  "video",
+  "video-camera",
+  "video-camera-off",
+  "warning-triangle",
+  "wifi",
+  "wifi-no-connection",
+  "zoom-in",
+  "zoom-out"
 ]
