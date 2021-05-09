@@ -1,34 +1,71 @@
 {
   "name": "iconic-react",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Collection of SVG icons from iconic.app as React components.",
   "engines": {
     "node": ">=12.16.0"
   },
-  "scripts": {
-    "get-icons-list": "node scripts/getRawHtml.mjs && node scripts/getIconsList.mjs",
-    "fetch-icons": "yarn get-icons-list && node scripts/downloadIcons.mjs"
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "typings": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jackyef/iconic-react.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jacky Efendi <jacky.efendi1@gmail.com>",
+  "keywords": [
+    "iconic",
+    "react",
+    "icons",
+    "svg"
+  ],
   "bugs": {
     "url": "https://github.com/jackyef/iconic-react/issues"
   },
   "homepage": "https://github.com/jackyef/iconic-react#readme",
-  "dependencies": {
-    "node-fetch": "^2.6.1"
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "concurrently yarn:build:*",
+    "build:esm": "cross-env BABEL_ENV=esm babel components --extensions .tsx -d dist/esm --source-maps",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel components --extensions .tsx -d dist/cjs --source-maps",
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
+    "get-icons-list": "node scripts/getRawHtml.mjs && node scripts/getIconsList.mjs",
+    "fetch-icons": "yarn get-icons-list && node scripts/downloadIcons.mjs",
+    "generate-components": "node scripts/generateReactComponents.js"
+  },
+  "peerDependencies": {
+    "react": ">=16"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.0",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.0",
+    "@babel/preset-react": "^7.12.0",
+    "@babel/preset-typescript": "^7.12.0",
+    "@babel/runtime": "^7.12.0",
     "@svgr/core": "^5.5.0",
     "@svgr/plugin-jsx": "^5.5.0",
     "@svgr/plugin-prettier": "^5.5.0",
     "@svgr/plugin-svgo": "^5.5.0",
-    "title-case": "^3.0.3"
+    "@types/react": "^17.0.5",
+    "concurrently": "5.3.0",
+    "cross-env": "7.0.3",
+    "node-fetch": "^2.6.1",
+    "react": "^17.0.2",
+    "title-case": "^3.0.3",
+    "typescript": "^4.1.3"
   }
 }
