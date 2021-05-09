@@ -5,13 +5,13 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const iconsList = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "./processed/icons.json"), "utf-8")
-);
-
 const iconDownloadUrl = `https://iconic.app/icons/iconic/svg/{:iconName}.svg`;
 
 export const downloadIcons = async () => {
+  const iconsList = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "./processed/icons.json"), "utf-8")
+  );
+
   const promises = iconsList.map(async (iconName) => {
     const response = await fetch(
       iconDownloadUrl.replace(`{:iconName}`, iconName)
