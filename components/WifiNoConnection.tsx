@@ -6,7 +6,7 @@ interface Props extends React.SVGAttributes<SVGElement> {
   size?: number;
 }
 
-export const WifiNoConnection = ({ size, ...props }: Props) => {
+export const WifiNoConnection = ({ size = 24, ...props }: Props) => {
   return (
     <svg width={size} height={size} fill="none" {...props}>
       <circle cx={12} cy={18} r={1} fill="currentColor" />

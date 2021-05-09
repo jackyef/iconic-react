@@ -6,7 +6,7 @@ interface Props extends React.SVGAttributes<SVGElement> {
   size?: number;
 }
 
-export const TrendingUp = ({ size, ...props }: Props) => {
+export const TrendingUp = ({ size = 24, ...props }: Props) => {
   return (
     <svg width={size} height={size} fill="none" {...props}>
       <path

@@ -6,7 +6,7 @@ interface Props extends React.SVGAttributes<SVGElement> {
   size?: number;
 }
 
-export const Video = ({ size, ...props }: Props) => {
+export const Video = ({ size = 24, ...props }: Props) => {
   return (
     <svg width={size} height={size} fill="none" {...props}>
       <path

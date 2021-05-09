@@ -27,7 +27,7 @@ const generateReactComponents = () => {
   size?: number;
 }
 
-export const ${titleCasedIconName} = ({ size, ...props }: Props) => {`
+export const ${titleCasedIconName} = ({ size = 24, ...props }: Props) => {`
       )
       .replace("width={24} height={24}", "width={size} height={size}")
       .replace("export default SvgComponent;", "");

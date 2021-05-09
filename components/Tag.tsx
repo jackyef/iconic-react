@@ -6,7 +6,7 @@ interface Props extends React.SVGAttributes<SVGElement> {
   size?: number;
 }
 
-export const Tag = ({ size, ...props }: Props) => {
+export const Tag = ({ size = 24, ...props }: Props) => {
   return (
     <svg width={size} height={size} fill="none" {...props}>
       <circle cx={15} cy={9} r={1} fill="currentColor" />
