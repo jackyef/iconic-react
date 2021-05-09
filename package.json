@@ -7,7 +7,8 @@
     "node": ">=12.16.0"
   },
   "scripts": {
-    "get-icons-list": "node scripts/getRawHtml.mjs && node scripts/getIconsList.mjs"
+    "get-icons-list": "node scripts/getRawHtml.mjs && node scripts/getIconsList.mjs",
+    "fetch-icons": "yarn get-icons-list && node scripts/downloadIcons.mjs"
   },
   "repository": {
     "type": "git",
