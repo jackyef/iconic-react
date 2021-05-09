@@ -2,9 +2,10 @@
 
 Love [Iconic icons](https://iconic.app/)? If you are working with React, you might want to convert the icons into React components so you can inline them in your React app. This package does exactly that!
 
-This package exports the icons available on https://iconic.app/ as React component that accepts 1 prop, `size`. By default, the size is `24`, but you can simply pass it a different value to get an appropriately sized icon for your use case!
+This package exports the icons available on https://iconic.app/ as React components that accept the usual props that an `svg` would, except for 1 extra prop: `size`. By default, the size is `24`, but you can simply pass it a different value to get an appropriately sized icon for your use case!
 
 The icons use `fill="currentColor"`, which means it will automatically follow its closest parent text color.
+
 ## Example
 
 ```tsx
