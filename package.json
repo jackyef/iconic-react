@@ -35,9 +35,12 @@
   },
   "homepage": "https://github.com/jackyef/iconic-react#readme",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
+    "prepack": "yarn build",
+    "deploy": "npm publish",
     "build": "concurrently yarn:build:*",
     "build:esm": "cross-env BABEL_ENV=esm babel components --extensions .tsx -d dist/esm --source-maps",
     "build:cjs": "cross-env BABEL_ENV=cjs babel components --extensions .tsx -d dist/cjs --source-maps",
