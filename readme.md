@@ -6,6 +6,8 @@ This package exports the icons available on https://iconic.app/ as React compone
 
 The icons use `fill="currentColor"`, which means it will automatically follow its closest parent text color.
 
+The library also supports tree-shaking as long as you are using ESM named imports and your bundler supports tree-shaking too; Your bundle size will only grow depending on how many icons you are using!
+
 ## Example
 
 ```tsx

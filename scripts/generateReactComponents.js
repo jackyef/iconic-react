@@ -1,6 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 const { titleCase } = require("title-case");
+
+// Unfortunately, @svgr/core doesn't support mjs
+// So we have to make this file a regular commonjs (.js) module
 const svgr = require("@svgr/core").default;
 
 const generateComponents = async () => {
