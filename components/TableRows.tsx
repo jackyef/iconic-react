@@ -1,0 +1,23 @@
+/* This file is auto-generated */
+
+import * as React from "react";
+
+interface Props extends React.SVGAttributes<SVGElement> {
+  size?: number;
+}
+
+export const TableRows = ({ size, ...props }: Props) => {
+  return (
+    <svg width={size} height={size} fill="none" {...props}>
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M5.75 19.25h12.5a1 1 0 001-1V5.75a1 1 0 00-1-1H5.75a1 1 0 00-1 1v12.5a1 1 0 001 1zM19.25 9.25h-14M19.25 14.75h-14"
+      />
+    </svg>
+  );
+}
+
+

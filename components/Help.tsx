@@ -1,0 +1,41 @@
+/* This file is auto-generated */
+
+import * as React from "react";
+
+interface Props extends React.SVGAttributes<SVGElement> {
+  size?: number;
+}
+
+export const Help = ({ size, ...props }: Props) => {
+  return (
+    <svg width={size} height={size} fill="none" {...props}>
+      <circle
+        cx={12}
+        cy={12}
+        r={7.25}
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+      />
+      <circle
+        cx={12}
+        cy={12}
+        r={3.25}
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+      />
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M7 17l2.5-2.5M17 17l-2.5-2.5M9.5 9.5L7 7M14.5 9.5L17 7"
+      />
+    </svg>
+  );
+}
+
+
