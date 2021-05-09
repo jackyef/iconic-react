@@ -23,5 +23,12 @@
   "homepage": "https://github.com/jackyef/iconic-react#readme",
   "dependencies": {
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@svgr/core": "^5.5.0",
+    "@svgr/plugin-jsx": "^5.5.0",
+    "@svgr/plugin-prettier": "^5.5.0",
+    "@svgr/plugin-svgo": "^5.5.0",
+    "title-case": "^3.0.3"
   }
 }

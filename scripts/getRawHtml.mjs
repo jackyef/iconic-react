@@ -5,8 +5,6 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const iconDownloadUrl = `https://iconic.app/icons/iconic/svg/{:iconName}.svg`;
-
 const run = async () => {
   // The iconic.app website seems to be doing some kind of HTML stitching to make
   // the web feels like an SPA. This POST request returns a part of HTML document
