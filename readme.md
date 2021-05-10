@@ -8,6 +8,16 @@ The icons use `fill="currentColor"`, which means it will automatically follow it
 
 The library also supports tree-shaking as long as you are using ESM named imports and your bundler supports tree-shaking too; Your bundle size will only grow depending on how many icons you are using!
 
+## Installation
+
+```sh
+# Using npm
+npm install iconic-react
+
+# Using yarn
+yarn add iconic-react
+```
+
 ## Example
 
 ```tsx
