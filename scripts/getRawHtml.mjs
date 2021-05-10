@@ -32,6 +32,10 @@ export const getRawHtml = async () => {
 
   const text = await response.text();
 
+  if (!fs.existsSync(path.join(__dirname, "./raw/"))) {
+    fs.mkdirSync(path.join(__dirname, "./raw/"));
+  }
+
   fs.writeFileSync(path.join(__dirname, "./raw/icons-list.html"), text);
 
   return true;
