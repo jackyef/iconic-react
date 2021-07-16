@@ -9,18 +9,12 @@ interface Props extends React.SVGAttributes<SVGElement> {
 export const Search = ({ size = 24, ...props }: Props) => {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" {...props}>
-      <circle
-        cx={11}
-        cy={11}
-        r={6.25}
+      <path
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={1.5}
-      />
-      <path
-        fill="currentColor"
-        d="M18.72 19.78a.75.75 0 101.06-1.06l-1.06 1.06zm-3.75-3.75l3.75 3.75 1.06-1.06-3.75-3.75-1.06 1.06z"
+        d="M19.25 19.25L15.5 15.5M4.75 11a6.25 6.25 0 1112.5 0 6.25 6.25 0 01-12.5 0z"
       />
     </svg>
   );

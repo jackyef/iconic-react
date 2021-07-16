@@ -36,6 +36,14 @@ export const ${titleCasedIconName} = ({ size = 24, ...props }: Props) => {`
         "width={24} height={24}",
         'width={size} height={size} viewBox="0 0 24 24"'
       )
+      .replace(
+        "width={24}",
+        'width={size}'
+      )
+      .replace(
+        "height={24}",
+        'height={size} viewBox="0 0 24 24"'
+      )
       .replace("export default SvgComponent;", "");
 
     fs.writeFileSync(
