@@ -1,6 +1,6 @@
 {
   "name": "iconic-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Collection of SVG icons from iconic.app as React components.",
   "engines": {
     "node": ">=12.16.0"
